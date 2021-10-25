@@ -9,6 +9,10 @@ class MainClassComponent extends Component {
       { name: "Rakhi", title: "Designer", age: "25" },
     ],
   };
+
+  changeNamehandler = () => {
+    console.log("WOW");
+  };
   render() {
     return (
       <main>
@@ -27,6 +31,7 @@ class MainClassComponent extends Component {
           title={this.state.persons[2].title}
           age={this.state.persons[2].age}
         />
+        <button onClick={this.changeNamehandler}>Click me</button>
       </main>
     );
   }

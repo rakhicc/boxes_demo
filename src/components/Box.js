@@ -1,12 +1,16 @@
-const Box=(props) => {
-    return ( <div className="box">
-    <div>
-  <h2>{props.name}</h2>
-  <p>Title: {props.title}</p>
-  <p>Age: {props.age}</p>
-  </div>
-  </div> );
-      
-    
+const Box = (props) => {
+  const addhandler = () => {
+    console.log("Box WOW");
   };
-  export default Box;
+  return (
+    <div className="box">
+      <div>
+        <h2>{props.name}</h2>
+        <p>Title: {props.title}</p>
+        <p>Age: {props.age}</p>
+        <button onClick={addhandler}>Click me</button>
+      </div>
+    </div>
+  );
+};
+export default Box;
