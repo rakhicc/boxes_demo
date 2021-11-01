@@ -1,7 +1,10 @@
+import { Link, useRouteMatch } from "react-router-dom";
 const Box = (props) => {
   const addhandler = () => {
     console.log("Box WOW");
   };
+  const match = useRouteMatch();
+
   return (
     <div className="box">
       <div>
@@ -9,6 +12,7 @@ const Box = (props) => {
         <p>Title: {props.title}</p>
         <p>Age: {props.age}</p>
         <button onClick={addhandler}>Click me</button>
+        <Link to={`${match.url}/${props.name}`}>More on Person</Link>
       </div>
     </div>
   );
